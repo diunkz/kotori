@@ -60,7 +60,7 @@
         </p>
       </div>
 
-      <!-- Palco Interativo Proporcional (Mobile redondinho + PC amplo como antes) -->
+      <!-- Palco Interativo Proporcional -->
       <div id="sticker-stage" class="relative mx-auto mt-6 aspect-square w-full max-w-[390px] sm:aspect-auto sm:mt-10 sm:h-96 sm:max-w-3xl select-none">
 
         <!-- ==================== 5 ADESIVOS ORIGINAIS (VOLTAM AO SOLTAR) ==================== -->
@@ -96,7 +96,7 @@
               <rect x="14" y="6" width="62" height="98" rx="10" class="fill-brand-lilac-soft stroke-foreground" stroke-width="3.5"/>
               <rect x="22" y="14" width="46" height="14" rx="4" class="fill-brand-accent stroke-foreground" stroke-width="2.5"/>
               <rect x="22" y="34" width="46" height="60" rx="6" class="fill-card stroke-foreground" stroke-width="2.5"/>
-              <path d="M45 50 L49 58 L58 59 L51 65 L53 74 L45 69 L37 74 L39 65 L32 59 L41 58 Z" class="fill-brand-moss stroke-foreground" stroke-width="2"/>
+              <path d="M45 50 L 49 58 L 58 59 L 51 65 L 53 74 L 45 69 L 37 74 L 39 65 L 32 59 L 41 58 Z" class="fill-brand-moss stroke-foreground" stroke-width="2"/>
             </svg>
           </div>
         </div>
@@ -459,38 +459,127 @@
       </div>
     </section>
 
-    <!-- VIEW 4: SOBRE A KOTORI -->
+    <!-- VIEW 4: ENVIOS -->
+    <section id="view-entregas" class="page-view hidden flex-1 pt-12 pb-10 sm:pt-28 sm:pb-16">
+      <div class="mx-auto w-full max-w-5xl px-6">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl font-bold tracking-tight">Envios</h2>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Envio protegido para colecionadores de todo o Brasil e opções rápidas para Manaus.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+          <!-- Linha Superior (Destaque Nacional): Envio para Todo o Brasil -->
+          <article class="flex flex-col justify-between rounded-3xl border border-border bg-background-soft p-6">
+            <div>
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-lilac-soft text-xl">
+                📦
+              </div>
+              <h3 class="mt-4 font-display text-lg font-bold">Envio para Todo o Brasil</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Postagem segura via Correios (PAC/Sedex) ou transportadora com código de rastreio. Embalagem reforçada com plástico-bolha, papelão e toploader.
+              </p>
+            </div>
+            <span class="mt-6 inline-block w-fit rounded-full border border-border bg-card px-3 py-1 text-[11px] font-semibold text-foreground">
+              Proteção reforçada · Com rastreio
+            </span>
+          </article>
+
+          <!-- Linha Inferior (Opções Locais): Retirada em Manaus + Moto ou Carro por App -->
+          <div class="grid gap-6 md:grid-cols-2">
+            <!-- Retirada em Manaus -->
+            <article class="flex flex-col justify-between rounded-3xl border border-border bg-background-soft p-6">
+              <div>
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-moss-soft text-xl">
+                  📍
+                </div>
+                <h3 class="mt-4 font-display text-lg font-bold">Retirada em Manaus</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Retire seu pedido sem taxa de entrega mediante agendamento prévio pelo WhatsApp (bairro Japiim ou pontos combinados).
+                </p>
+              </div>
+              <span class="mt-6 inline-block w-fit rounded-full border border-border bg-card px-3 py-1 text-[11px] font-semibold text-foreground">
+                Taxa grátis · Horário combinado
+              </span>
+            </article>
+
+            <!-- Moto ou Carro por App -->
+            <article class="flex flex-col justify-between rounded-3xl border border-border bg-background-soft p-6">
+              <div>
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-accent-soft text-xl">
+                  🛵
+                </div>
+                <h3 class="mt-4 font-display text-lg font-bold">Moto ou Carro por App</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Envio no mesmo dia em Manaus via Uber Moto, Uber Flash ou 99 Entrega, calculado conforme a distância até o seu endereço.
+                </p>
+              </div>
+              <span class="mt-6 inline-block w-fit rounded-full border border-border bg-card px-3 py-1 text-[11px] font-semibold text-foreground">
+                Entrega rápida em Manaus
+              </span>
+            </article>
+          </div>
+        </div>
+
+        <!-- Faixa de apoio para cotação -->
+        <div class="mt-8 flex flex-col items-start justify-between gap-4 rounded-3xl border border-border bg-card p-6 sm:flex-row sm:items-center">
+          <div>
+            <p class="font-display text-base font-bold">Quer simular o frete antes de fechar?</p>
+            <p class="mt-0.5 text-xs text-muted-foreground">Chame no WhatsApp.</p>
+          </div>
+          <a
+            href="https://wa.me/5592995254107?text=Ol%C3%A1!%20Gostaria%20de%20simular%20o%20frete%20antes%20de%20fechar%20meu%20pedido."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex shrink-0 items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold text-background transition-transform hover:scale-105"
+          >
+            Consultar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: SOBRE A KOTORI -->
     <section id="view-sobre" class="page-view hidden flex-1 flex items-center pt-12 pb-10 sm:pt-28 sm:pb-16">
       <div class="mx-auto grid w-full max-w-5xl items-center gap-12 px-6 md:grid-cols-2">
         <div>
           <h2 class="font-display text-3xl font-bold tracking-tight">Sobre a Kotori 小鳥</h2>
           <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            A <strong>Kotori</strong> nasceu da paixão pelo colecionismo de Pokémon TCG e pela curadoria de produtos originais importados do Japão e da China. Cada item é embalado com proteção reforçada para chegar impecável na sua coleção.
+            A <strong>Kotori</strong> nasceu da paixão pelo colecionismo de Pokémon TCG e pela curadoria de produtos originais importados do Japão e da China. Cada item é selecionado e embalado com cuidado para chegar impecável na sua coleção.
+          </p>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Acompanhe as novidades, reposições e abertura de caixas nas nossas redes ou fale diretamente conosco:
           </p>
 
-          <ul class="mt-8 space-y-4 text-sm">
-            <li class="flex items-start gap-3">
-              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft border border-border">📍</span>
-              <div>
-                <p class="font-semibold">Entrega Expressa em Manaus</p>
-                <p class="text-muted-foreground">Motoboy / Uber Direct com cálculo por distância ou retirada combinada.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft border border-border">💬</span>
-              <div>
-                <p class="font-semibold">Instagram &amp; Atendimento Direto</p>
-                <a href="https://instagram.com/kotoribr" target="_blank" rel="noopener noreferrer" class="text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">@kotoribr</a>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft border border-border">💬</span>
-              <div>
-                <p class="font-semibold">Instagram &amp; Atendimento Direto</p>
-                <a href="https://instagram.com/kotoribr" target="_blank" rel="noreferrer" class="text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">@kotoribr</a>
-              </div>
-            </li>
-          </ul>
+          <!-- Botões de Redes Sociais (Instagram e WhatsApp) -->
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="https://instagram.com/kotoribr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+              <span>@kotoribr</span>
+            </a>
+
+            <a
+              href="https://wa.me/5592995254107?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kotori."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-foreground"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-brand-moss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
 
         <!-- Card Polaroid Inclinado -->
@@ -511,7 +600,7 @@
       </div>
     </section>
 
-    <!-- VIEW 5: CHECKOUT / QR CODE WHATSAPP -->
+    <!-- VIEW 6: CHECKOUT / QR CODE WHATSAPP -->
     <section id="view-checkout" class="page-view hidden flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-10 sm:pt-28 sm:pb-16">
       <div class="mx-auto w-full max-w-sm rounded-3xl border border-border bg-card p-8 text-center shadow-sm">
         <h2 class="font-display text-2xl font-bold tracking-tight">Escaneie o QR Code</h2>
@@ -562,6 +651,7 @@
           <button type="button" data-nav="inicio" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Início</button>
           <button type="button" data-nav="destaques" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Destaques</button>
           <button type="button" data-nav="catalogo" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Catálogo</button>
+          <button type="button" data-nav="entregas" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Envios</button>
           <button type="button" data-nav="sobre" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Sobre</button>
         </div>
       </div>
@@ -573,6 +663,7 @@
         <button type="button" data-nav="inicio" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Início</button>
         <button type="button" data-nav="destaques" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Destaques</button>
         <button type="button" data-nav="catalogo" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Catálogo</button>
+        <button type="button" data-nav="entregas" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Envios</button>
         <button type="button" data-nav="sobre" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Sobre</button>
         
         <!-- Botão do Carrinho -->
@@ -612,8 +703,10 @@
       
       <!-- Lado Esquerdo: Copyright e Assinatura -->
       <div class="min-w-0 space-y-0.5 sm:space-y-1">
-        <p class="truncate font-medium text-zinc-700 dark:text-zinc-300">KOTORI 小鳥 TCG e Colecionáveis © 2026</p>
-        <p class="text-[11px]">Feito para quem coleciona.</p>
+        <p class="truncate font-medium text-zinc-700 dark:text-zinc-300">
+          KOTORI 小鳥 <span class="hidden sm:inline">TCG e Colecionáveis </span>© 2026
+        </p>
+        <p class="truncate text-[11px]">Raridade em cada detalhe.</p>
       </div>
 
       <!-- Lado Direito: Instagram e WhatsApp (+ Chamada apenas no Desktop) -->
@@ -674,7 +767,7 @@
     <div class="border-t border-border bg-background-soft px-6 pt-6 pb-20 sm:pb-6">
       <div class="flex items-center justify-between text-sm">
         <span class="text-muted-foreground">Subtotal</span>
-        <span id="cart-subtotal" class="font-display text-lg font-bold">R$ 0,00</span>
+        <span id="cart-subtotal" class="font-display text-lg font-bold">R\$ 0,00</span>
       </div>
       <p class="mt-1 text-[11px] text-muted-foreground">Frete para Manaus ou Correios calculado na finalização.</p>
       <button id="checkout-whatsapp-btn" type="button" class="mt-4 w-full rounded-full bg-foreground py-3 text-sm font-semibold text-background transition-transform hover:scale-[1.02] active:scale-[0.98]">

@@ -68,6 +68,7 @@ const VIEW_LABELS = {
   inicio: 'Início',
   destaques: 'Destaques',
   catalogo: 'Catálogo',
+  entregas: 'Envios',
   sobre: 'Sobre',
   checkout: 'Pedido'
 };
@@ -167,7 +168,7 @@ function initNavigation() {
   });
 
   const initialHash = window.location.hash.replace('#', '');
-  const validViews = ['inicio', 'destaques', 'catalogo', 'sobre', 'checkout'];
+  const validViews = ['inicio', 'destaques', 'catalogo', 'entregas', 'sobre', 'checkout'];
   const startView = validViews.includes(initialHash) ? initialHash : 'inicio';
 
   if (startView === 'checkout' && cart.length > 0) {
