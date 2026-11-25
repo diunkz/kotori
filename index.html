@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOTORI 小鳥 — Cards & Collectibles</title>
+  <meta name="description" content="Loja especializada em Pokémon TCG, Booster Boxes Japonesas e Chinesas, ETBs e Slabs CGC/PSA em Manaus e para todo o Brasil." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            background: 'var(--bg)',
+            'background-soft': 'var(--bg-soft)',
+            foreground: 'var(--fg)',
+            'muted-foreground': 'var(--muted-fg)',
+            card: 'var(--card)',
+            border: 'var(--border)',
+            'brand-moss': '#8FA889',
+            'brand-moss-soft': 'var(--moss-soft)',
+            'brand-earth': '#C4A484',
+            'brand-earth-soft': 'var(--earth-soft)',
+            'brand-lilac-soft': 'var(--lilac-soft)',
+            'brand-accent': '#E5C158',
+            'brand-accent-soft': 'var(--accent-soft)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="flex min-h-screen flex-col bg-background text-foreground antialiased transition-colors duration-300">
+
+  <!-- ÁREA PRINCIPAL -->
+  <main class="flex-1 flex flex-col">
+
+    <!-- VIEW 1: INÍCIO -->
+    <section id="view-inicio" class="page-view flex-1 flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-8 pb-6 sm:pt-24 sm:pb-12">
+      <div class="mx-auto w-full max-w-5xl text-center">
+        <span class="inline-block rounded-full border border-border bg-background-soft px-3 py-1 text-[11px] sm:text-xs font-medium tracking-wide text-muted-foreground mb-3 sm:mb-4">
+          Manaus, AM · Envios para todo o Brasil
+        </span>
+        <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+          KOTORI <span class="font-normal text-muted-foreground">小鳥</span>
+        </h1>
+        <p class="mx-auto mt-2.5 max-w-md sm:max-w-none text-xs sm:text-base leading-relaxed text-muted-foreground">
+          Cards &amp; Collectibles · Pokémon TCG · Importados JP/CN · Slabs CGC &amp; PSA
+        </p>
+      </div>
+
+      <!-- Palco Interativo Proporcional (Mobile redondinho + PC amplo como antes) -->
+      <div id="sticker-stage" class="relative mx-auto mt-6 aspect-square w-full max-w-[390px] sm:aspect-auto sm:mt-10 sm:h-96 sm:max-w-3xl select-none">
+
+        <!-- ==================== 5 ADESIVOS ORIGINAIS (VOLTAM AO SOLTAR) ==================== -->
+        
+        <!-- Adesivo 1: Pokébola Minimalista -->
+        <div class="draggable-sticker sticker-item absolute left-[2%] top-[3%] w-[16%] sm:left-6 sm:top-0 sm:w-24 cursor-grab active:cursor-grabbing" data-rotate="-10">
+          <div class="sticker-float" style="animation-delay: 0s;">
+            <svg viewBox="0 0 100 100" class="h-full w-full drop-shadow-sm">
+              <circle cx="50" cy="50" r="42" class="fill-card stroke-foreground" stroke-width="4"/>
+              <path d="M 8 50 A 42 42 0 0 1 92 50 Z" class="fill-brand-earth-soft stroke-foreground" stroke-width="4"/>
+              <line x1="8" y1="50" x2="92" y2="50" class="stroke-foreground" stroke-width="4"/>
+              <circle cx="50" cy="50" r="13" class="fill-card stroke-foreground" stroke-width="4"/>
+              <circle cx="50" cy="50" r="5" class="fill-brand-moss"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Adesivo 2: Folha Japonesa / Bambu -->
+        <div class="draggable-sticker sticker-item absolute bottom-[5%] left-[3%] w-[14%] sm:bottom-4 sm:left-16 sm:w-24 cursor-grab active:cursor-grabbing" data-rotate="12">
+          <div class="sticker-float" style="animation-delay: 0.6s;">
+            <svg viewBox="0 0 90 90" class="h-full w-full drop-shadow-sm">
+              <path d="M12 78 C 6 32 36 8 80 10 C 83 52 58 82 12 78 Z" class="fill-brand-moss stroke-foreground" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M14 76 C 32 56 50 38 70 22" class="fill-none stroke-foreground" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M38 52 L 30 36 M52 38 L 48 24 M46 46 L 62 46" class="fill-none stroke-foreground" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Adesivo 3: Carta Graduada (Slab PSA/CGC) -->
+        <div class="draggable-sticker sticker-item absolute right-[2%] top-[3%] w-[14%] sm:right-12 sm:top-0 sm:w-24 cursor-grab active:cursor-grabbing" data-rotate="10">
+          <div class="sticker-float" style="animation-delay: 1.2s;">
+            <svg viewBox="0 0 90 110" class="h-full w-full drop-shadow-sm">
+              <rect x="14" y="6" width="62" height="98" rx="10" class="fill-brand-lilac-soft stroke-foreground" stroke-width="3.5"/>
+              <rect x="22" y="14" width="46" height="14" rx="4" class="fill-brand-accent stroke-foreground" stroke-width="2.5"/>
+              <rect x="22" y="34" width="46" height="60" rx="6" class="fill-card stroke-foreground" stroke-width="2.5"/>
+              <path d="M45 50 L49 58 L58 59 L51 65 L53 74 L45 69 L37 74 L39 65 L32 59 L41 58 Z" class="fill-brand-moss stroke-foreground" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Adesivo 4: Booster Pack -->
+        <div class="draggable-sticker sticker-item absolute bottom-[5%] right-[3%] w-[14%] sm:bottom-2 sm:right-16 sm:w-24 cursor-grab active:cursor-grabbing" data-rotate="-8">
+          <div class="sticker-float" style="animation-delay: 1.8s;">
+            <svg viewBox="0 0 90 100" class="h-full w-full drop-shadow-sm">
+              <path d="M18 12 L24 6 L30 12 L36 6 L42 12 L48 6 L54 12 L60 6 L66 12 L72 6 L72 94 L66 88 L60 94 L54 88 L48 94 L42 88 L36 94 L30 88 L24 94 L18 88 Z" class="fill-brand-accent-soft stroke-foreground" stroke-width="3.5" stroke-linejoin="round"/>
+              <circle cx="45" cy="50" r="16" class="fill-card stroke-foreground" stroke-width="3"/>
+              <path d="M29 50 H61" class="stroke-foreground" stroke-width="3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Adesivo 5: Brilho Raro (Holo Sparkle - Desktop) -->
+        <div class="draggable-sticker sticker-item hidden sm:block absolute left-1/4 -top-4 w-14 cursor-grab active:cursor-grabbing" data-rotate="-15">
+          <div class="sticker-float" style="animation-delay: 0.9s;">
+            <svg viewBox="0 0 100 100" class="h-full w-full drop-shadow-sm">
+              <path d="M44 8 C 48 34 56 42 82 46 C 56 50 48 58 44 84 C 40 58 32 50 6 46 C 32 42 40 34 44 8 Z" class="fill-brand-accent stroke-foreground" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M80 62 C 82 72 84 74 94 76 C 84 78 82 80 80 90 C 78 80 76 78 66 76 C 76 74 78 72 80 62 Z" class="fill-brand-moss-soft stroke-foreground" stroke-width="3" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- ==================== 6 SEMENTES VIBRANDO LEVEMENTE (ALIMENTAM O KOTORI) ==================== -->
+
+        <!-- 1: Semente de Girassol (Meio Esquerda) -->
+        <div class="draggable-sticker seed-item absolute left-[3%] top-1/2 -translate-y-1/2 w-[7.5%] sm:left-10 sm:w-9 cursor-grab active:cursor-grabbing" data-rotate="-18" title="Arraste para alimentar o Kotori!">
+          <div class="seed-wiggle" style="animation-delay: 0.1s;">
+            <svg viewBox="0 0 80 80" class="h-full w-full drop-shadow-xs">
+              <path d="M 40 12 C 56 26, 60 52, 40 68 C 20 52, 24 26, 40 12 Z" fill="#3F3B37" stroke="#18181b" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M 33 24 C 30 38, 32 50, 36 60 M 47 24 C 50 38, 48 50, 44 60 M 40 16 V 64" fill="none" stroke="#F5F2EB" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 2: Grão de Painço Dourado (Topo Esquerda-Centro) -->
+        <div class="draggable-sticker seed-item absolute left-[24%] top-[6%] w-[6.5%] sm:left-40 sm:top-8 sm:w-8 cursor-grab active:cursor-grabbing" data-rotate="24" title="Arraste para alimentar o Kotori!">
+          <div class="seed-wiggle" style="animation-delay: 0.9s;">
+            <svg viewBox="0 0 80 80" class="h-full w-full drop-shadow-xs">
+              <ellipse cx="40" cy="40" rx="18" ry="24" fill="#E5C158" stroke="#18181b" stroke-width="4"/>
+              <path d="M 34 26 Q 31 40 34 54" fill="none" stroke="#FFF9E6" stroke-width="2.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 3: Semente de Girassol (Topo Direita-Centro) -->
+        <div class="draggable-sticker seed-item absolute right-[24%] top-[6%] w-[7.5%] sm:right-36 sm:top-5 sm:w-9 cursor-grab active:cursor-grabbing" data-rotate="16" title="Arraste para alimentar o Kotori!">
+          <div class="seed-wiggle" style="animation-delay: 1.7s;">
+            <svg viewBox="0 0 80 80" class="h-full w-full drop-shadow-xs">
+              <path d="M 40 12 C 56 26, 60 52, 40 68 C 20 52, 24 26, 40 12 Z" fill="#3F3B37" stroke="#18181b" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M 33 24 C 30 38, 32 50, 36 60 M 47 24 C 50 38, 48 50, 44 60 M 40 16 V 64" fill="none" stroke="#F5F2EB" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 4: Amêndoa / Castanha (Meio Direita) -->
+        <div class="draggable-sticker seed-item absolute right-[3%] top-1/2 -translate-y-1/2 w-[7.5%] sm:right-8 sm:w-9 cursor-grab active:cursor-grabbing" data-rotate="-20" title="Arraste para alimentar o Kotori!">
+          <div class="seed-wiggle" style="animation-delay: 2.5s;">
+            <svg viewBox="0 0 80 80" class="h-full w-full drop-shadow-xs">
+              <path d="M 40 16 C 55 24, 58 48, 40 64 C 22 48, 25 24, 40 16 Z" fill="#C4A484" stroke="#18181b" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M 40 22 V 58" fill="none" stroke="#18181b" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 5: Grão de Painço Dourado (Base Esquerda-Centro) -->
+        <div class="draggable-sticker seed-item absolute left-[24%] bottom-[4%] w-[6.5%] sm:left-44 sm:bottom-2 sm:w-8 cursor-grab active:cursor-grabbing" data-rotate="-22" title="Arraste para alimentar o Kotori!">
+          <div class="seed-wiggle" style="animation-delay: 1.3s;">
+            <svg viewBox="0 0 80 80" class="h-full w-full drop-shadow-xs">
+              <ellipse cx="40" cy="40" rx="18" ry="24" fill="#E5C158" stroke="#18181b" stroke-width="4"/>
+              <path d="M 34 26 Q 31 40 34 54" fill="none" stroke="#FFF9E6" stroke-width="2.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 6: Semente de Girassol (Base Direita-Centro) -->
+        <div class="draggable-sticker seed-item absolute right-[24%] bottom-[4%] w-[7.5%] sm:right-44 sm:bottom-2 sm:w-9 cursor-grab active:cursor-grabbing" data-rotate="22" title="Arraste para alimentar o Kotori!">
+          <div class="seed-wiggle" style="animation-delay: 2.1s;">
+            <svg viewBox="0 0 80 80" class="h-full w-full drop-shadow-xs">
+              <path d="M 40 12 C 56 26, 60 52, 40 68 C 20 52, 24 26, 40 12 Z" fill="#3F3B37" stroke="#18181b" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M 33 24 C 30 38, 32 50, 36 60 M 47 24 C 50 38, 48 50, 44 60 M 40 16 V 64" fill="none" stroke="#F5F2EB" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- ==================== MEDALHÃO CENTRAL ==================== -->
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div class="relative z-20 aspect-square w-[66%] sm:w-80">
+
+            <!-- Texto Circular Giratório -->
+            <svg id="orbit-text" viewBox="0 0 200 200" aria-hidden="true" class="orbit-spin pointer-events-none absolute inset-0 h-full w-full">
+              <defs>
+                <path id="kotori-ring" d="M100 100 m -88 0 a 88 88 0 1 1 176 0 a 88 88 0 1 1 -176 0"></path>
+              </defs>
+              <text class="fill-foreground font-semibold uppercase tracking-widest" font-size="9.8">
+                <textPath href="#kotori-ring" textLength="546" lengthAdjust="spacing">
+                  KOTORI 小鳥 · POKÉMON TCG · BOOSTER BOXES · SLABS · 
+                </textPath>
+              </text>
+            </svg>
+
+            <button id="hero-flip-btn" type="button" aria-label="Abrir catálogo Kotori" class="pointer-events-auto flip-scene absolute inset-0 m-auto aspect-square w-[74%] rounded-full focus:outline-none">
+              <div class="flip-card relative h-full w-full">
+                
+                <!-- Frente: Pássaro inteiro centralizado no círculo -->
+                <div class="flip-face flip-front absolute inset-0 flex flex-col items-center justify-center overflow-hidden rounded-full border-2 border-foreground bg-brand-moss-soft p-2.5 sm:p-3 shadow-sm">
+                  <svg id="kotori-bird-svg" viewBox="0 0 185 152" class="-mt-4 sm:mt-0 h-[82%] w-[88%]">
+                    <!-- Galho Curvo -->
+                    <path d="M 16 119 C 42 101, 74 115, 106 111 C 128 108, 148 93, 162 75" fill="none" stroke="#18181b" stroke-width="3.6" stroke-linecap="round"/>
+                    <!-- Ramificação inferior direita -->
+                    <path d="M 118 108 C 130 108, 140 110, 148 113" fill="none" stroke="#18181b" stroke-width="2.6" stroke-linecap="round"/>
+                    <!-- Ramificação superior direita -->
+                    <path d="M 138 96 C 140 87, 142 79, 144 71" fill="none" stroke="#18181b" stroke-width="2.6" stroke-linecap="round"/>
+
+                    <!-- Folha inferior esquerda -->
+                    <path d="M 56 108 C 62 118, 75 123, 85 121 C 79 112, 68 107, 56 108 Z" fill="#3E5242" stroke="#18181b" stroke-width="2.4" stroke-linejoin="round"/>
+                    <path d="M 58 109 Q 71 115 82 120" fill="none" stroke="#18181b" stroke-width="1.3" stroke-linecap="round"/>
+
+                    <!-- Folha inferior direita -->
+                    <path d="M 116 109 C 124 117, 137 120, 147 116 C 139 108, 127 106, 116 109 Z" fill="#3E5242" stroke="#18181b" stroke-width="2.4" stroke-linejoin="round"/>
+                    <path d="M 118 110 Q 131 113 144 115" fill="none" stroke="#18181b" stroke-width="1.3" stroke-linecap="round"/>
+
+                    <!-- Folha média direita -->
+                    <path d="M 143 92 C 152 91, 162 93, 168 99 C 159 102, 149 99, 143 92 Z" fill="#3E5242" stroke="#18181b" stroke-width="2.4" stroke-linejoin="round"/>
+
+                    <!-- Folha superior (alinhada ao galho) -->
+                    <path d="M 139 95 C 137 83, 140 71, 147 63 C 150 74, 147 86, 139 95 Z" fill="#3E5242" stroke="#18181b" stroke-width="2.4" stroke-linejoin="round"/>
+                    <path d="M 140 93 Q 143 79 146 66" fill="none" stroke="#18181b" stroke-width="1.3" stroke-linecap="round"/>
+
+                    <!-- Folha ponta direita -->
+                    <path d="M 152 84 C 156 73, 165 65, 175 62 C 172 73, 164 81, 152 84 Z" fill="#3E5242" stroke="#18181b" stroke-width="2.4" stroke-linejoin="round"/>
+                    <path d="M 154 82 Q 164 73 173 64" fill="none" stroke="#18181b" stroke-width="1.3" stroke-linecap="round"/>
+
+                    <!-- Cauda saindo para a esquerda -->
+                    <path d="M 55 82 L 26 89 C 22 90, 22 94, 27 94 L 56 90 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.8" stroke-linejoin="round"/>
+                    <path d="M 56 89 L 31 96 C 28 97, 29 100, 34 99 L 58 94 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.6" stroke-linejoin="round"/>
+
+                    <!-- Corpo Redondo Equilibrado -->
+                    <path d="M 90 29 
+                             C 108 29, 120 42, 123 58 
+                             C 132 68, 134 85, 125 98 
+                             C 116 111, 100 113, 87 112 
+                             C 70 111, 55 103, 53 87 
+                             C 51 73, 56 60, 64 52 
+                             C 68 38, 77 29, 90 29 Z" 
+                          fill="#ffffff" stroke="#18181b" stroke-width="3.2" stroke-linejoin="round"/>
+
+                    <!-- Penugem sutil acompanhando a curva -->
+                    <path d="M 85 29 L 84 26 M 90 29 L 90 26 M 95 29 L 96 26
+                             M 120 51 L 123 49 M 123 58 L 126 57 M 128 66 L 131 65
+                             M 66 44 L 63 42 M 61 51 L 58 49
+                             M 67 107 L 65 110 M 73 110 L 72 113 M 102 111 L 103 114 M 109 109 L 111 112" 
+                          stroke="#18181b" stroke-width="1.5" stroke-linecap="round"/>
+
+                    <!-- Asinha esquerda bem ajustada e arredondada abraçando o corpo -->
+                    <path d="M 65 54 
+                             C 54 62, 50 76, 54 87 
+                             C 56 91, 61 89, 64 84 
+                             C 69 78, 73 71, 76 65" 
+                          fill="#ffffff" stroke="#18181b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 67 65 L 60 71 M 69 72 L 62 78" stroke="#18181b" stroke-width="1.8" stroke-linecap="round"/>
+
+                    <!-- Pezinhos agarrando o galho -->
+                    <path d="M 79 111 L 78 117 M 82 111 L 81 118 M 85 111 L 84 117" stroke="#18181b" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M 103 110 L 102 116 M 106 110 L 105 117 M 109 109 L 108 115" stroke="#18181b" stroke-width="2" stroke-linecap="round"/>
+
+                    <!-- OLHOS NORMAIS (Piscando) -->
+                    <g class="kotori-eyes-normal">
+                      <g class="kotori-eye" style="transform-origin: 81px 53px;">
+                        <circle class="kotori-sclera" cx="81" cy="53" r="4.2" fill="#18181b"/>
+                        <circle id="kotori-pupil-left" cx="79.8" cy="51.8" r="1.2" fill="#ffffff"/>
+                      </g>
+                      <g class="kotori-eye" style="transform-origin: 102px 50px;">
+                        <circle class="kotori-sclera" cx="102" cy="50" r="4.2" fill="#18181b"/>
+                        <circle id="kotori-pupil-right" cx="100.8" cy="48.8" r="1.2" fill="#ffffff"/>
+                      </g>
+                    </g>
+
+                    <!-- OLHOS FELIZES (^ ^) E BOCHECHAS CORADAS (Aparecem ao alimentar!) -->
+                    <g class="kotori-happy-face opacity-0 transition-opacity duration-300">
+                      <path d="M 76.5 54 Q 81 48 85.5 54" fill="none" stroke="#18181b" stroke-width="2.6" stroke-linecap="round"/>
+                      <path d="M 97.5 51 Q 102 45 106.5 51" fill="none" stroke="#18181b" stroke-width="2.6" stroke-linecap="round"/>
+                      <ellipse cx="74" cy="61" rx="6" ry="3.6" fill="#FF8FA3" opacity="0.85"/>
+                      <ellipse cx="110" cy="58" rx="6" ry="3.6" fill="#FF8FA3" opacity="0.85"/>
+                      <path class="kotori-heart" d="M 118 32 C 118 29, 114 27, 112 30 C 110 27, 106 29, 106 32 C 106 36, 112 40, 112 40 C 112 40, 118 36, 118 32 Z" fill="#FF6B8B" stroke="#18181b" stroke-width="1.2"/>
+                    </g>
+
+                    <!-- Biquinho original fixo -->
+                    <path d="M 88.5 54.5 L 93 52 L 97.5 54.5 L 93 58 Z" fill="#18181b" stroke="#18181b" stroke-width="1" stroke-linejoin="round"/>
+                  </svg>
+
+                  <!-- Dedo indicador apontando pra cima + texto "deslize" (Mobile) -->
+                  <div aria-hidden="true" class="sm:hidden pointer-events-none absolute bottom-[10%] inset-x-0 flex justify-center">
+                    <div class="swipe-hint-group flex items-center gap-1 text-foreground">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0 fill-card stroke-foreground" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a2 2 0 0 0-2 2v8.5l-1.6-1.6a2 2 0 0 0-2.8 2.8l4.5 4.5A6 6 0 0 0 14.3 20H16a4 4 0 0 0 4-4v-4.5a1.5 1.5 0 0 0-3 0V11a1.5 1.5 0 0 0-3 0V4a2 2 0 0 0-2-2Z"/>
+                      </svg>
+                      <span class="text-[9px] font-bold uppercase tracking-wider text-foreground">deslize</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Verso: Ação rápida -->
+                <div class="flip-face flip-back absolute inset-0 flex flex-col items-center justify-center gap-2 sm:gap-3 rounded-full border-2 border-foreground bg-card px-4 sm:px-6 text-center shadow-sm">
+                  <span class="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-foreground text-background">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </span>
+                  <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wide">Abrir Catálogo</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AVISO DE PRIMEIRA VISITA (APARECE NA PRIMEIRA VEZ -> MUDA AO ALIMENTAR -> SOME DEPOIS) -->
+      <div id="kotori-feed-hint-container" class="mt-3 sm:mt-4 flex h-8 items-center justify-center px-4">
+        <p id="kotori-feed-hint" class="inline-flex items-center gap-1.5 rounded-full border border-border bg-background-soft/90 px-3.5 py-1 text-[11px] sm:text-xs font-medium text-muted-foreground shadow-2xs transition-all duration-500">
+          <span aria-hidden="true">🌻</span>
+          <span id="kotori-feed-hint-text">Arraste as sementes até o Kotori para alimentá-lo</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- VIEW 2: DESTAQUES -->
+    <section id="view-destaques" class="page-view hidden flex-1 pt-12 pb-10 sm:pt-28 sm:pb-16">
+      <div class="mx-auto w-full max-w-5xl px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <h2 class="font-display text-3xl font-bold tracking-tight">Destaques da Kotori</h2>
+            <p class="mt-2 text-sm text-muted-foreground">Seleção curada de edições asiáticas, caixas seladas e peças graduadas.</p>
+          </div>
+          <button type="button" onclick="navigateTo('catalogo')" class="w-fit text-sm font-medium underline-offset-4 hover:underline">Ver catálogo completo →</button>
+        </div>
+
+        <ol class="mt-8 flex flex-col gap-6">
+          <!-- Card 1 -->
+          <li>
+            <article class="group grid gap-6 rounded-3xl border border-border bg-background-soft p-6 md:grid-cols-2 md:items-center md:gap-10 md:p-8 shadow-sm">
+              <div class="order-2 flex flex-col md:order-1">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full border border-border bg-card px-3 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Importado Japão</span>
+                  <span class="rounded-full border border-border bg-card px-3 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Lacrado</span>
+                </div>
+                <h3 class="mt-4 font-display text-2xl font-bold tracking-tight">Booster Boxes Japonesas (SV / High Class)</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Caixas lacradas de fábrica direto do Japão. Qualidade de impressão superior, texturas exclusivas e pulls garantidos por box.
+                </p>
+                <div class="mt-6">
+                  <button type="button" onclick="filterCatalog('Booster Box')" class="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105">
+                    Ver Booster Boxes
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="order-1 flex aspect-video items-center justify-center rounded-2xl bg-brand-moss-soft p-6 md:order-2 overflow-hidden relative">
+                <svg viewBox="0 0 320 180" class="h-full w-full max-h-40">
+                  <rect x="65" y="30" width="190" height="120" rx="16" class="fill-card stroke-foreground" stroke-width="3"/>
+                  <rect x="85" y="48" width="150" height="36" rx="8" class="fill-brand-moss stroke-foreground" stroke-width="2.5"/>
+                  <circle cx="160" cy="112" r="20" class="fill-brand-accent stroke-foreground" stroke-width="2.5"/>
+                  <line x1="140" y1="112" x2="180" y2="112" class="stroke-foreground" stroke-width="2.5"/>
+                </svg>
+              </div>
+            </article>
+          </li>
+
+          <!-- Card 2 -->
+          <li>
+            <article class="group grid gap-6 rounded-3xl border border-border bg-background-soft p-6 md:grid-cols-2 md:items-center md:gap-10 md:p-8 shadow-sm">
+              <div class="order-2 flex flex-col md:order-1">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full border border-border bg-card px-3 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Autenticado</span>
+                  <span class="rounded-full border border-border bg-card px-3 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">CGC · PSA</span>
+                </div>
+                <h3 class="mt-4 font-display text-2xl font-bold tracking-tight">Slabs Graduados &amp; Cartas Avulsas</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Cartas encapsuladas com certificação oficial CGC e PSA, além de singles selecionadas em estado Mint/Near Mint para coleção ou deck.
+                </p>
+                <div class="mt-6">
+                  <button type="button" onclick="filterCatalog('Slab')" class="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105">
+                    Explorar Slabs
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="order-1 flex aspect-video items-center justify-center rounded-2xl bg-brand-lilac-soft p-6 md:order-2 overflow-hidden relative">
+                <svg viewBox="0 0 320 180" class="h-full w-full max-h-40">
+                  <rect x="110" y="16" width="100" height="148" rx="12" class="fill-card stroke-foreground" stroke-width="3"/>
+                  <rect x="122" y="26" width="76" height="20" rx="5" class="fill-brand-accent stroke-foreground" stroke-width="2.5"/>
+                  <rect x="122" y="54" width="76" height="98" rx="8" class="fill-brand-lilac-soft stroke-foreground" stroke-width="2.5"/>
+                  <polygon points="160,76 168,94 188,96 173,109 177,128 160,118 143,128 147,109 132,96 152,94" class="fill-brand-accent stroke-foreground" stroke-width="2.5"/>
+                </svg>
+              </div>
+            </article>
+          </li>
+
+          <!-- Card 3 -->
+          <li>
+            <article class="group grid gap-6 rounded-3xl border border-border bg-background-soft p-6 md:grid-cols-2 md:items-center md:gap-10 md:p-8 shadow-sm">
+              <div class="order-2 flex flex-col md:order-1">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full border border-border bg-card px-3 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Chinês Simplificado</span>
+                  <span class="rounded-full border border-border bg-card px-3 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Edições Especiais</span>
+                </div>
+                <h3 class="mt-4 font-display text-2xl font-bold tracking-tight">Coleções Exclusivas &amp; ETBs</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Elite Trainer Boxes, coleções comemorativas e boxes em Chinês Simplificado com artes alternativas cobiçadas e acabamento japonês.
+                </p>
+                <div class="mt-6">
+                  <button type="button" onclick="filterCatalog('ETB')" class="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105">
+                    Ver ETBs &amp; Especiais
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="order-1 flex aspect-video items-center justify-center rounded-2xl bg-brand-earth-soft p-6 md:order-2 overflow-hidden relative">
+                <svg viewBox="0 0 320 180" class="h-full w-full max-h-40">
+                  <rect x="75" y="34" width="170" height="112" rx="14" class="fill-card stroke-foreground" stroke-width="3"/>
+                  <path d="M75 72 H245" class="stroke-foreground" stroke-width="3"/>
+                  <rect x="135" y="58" width="50" height="28" rx="8" class="fill-brand-earth stroke-foreground" stroke-width="2.5"/>
+                </svg>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- VIEW 3: CATÁLOGO COMPLETO -->
+    <section id="view-catalogo" class="page-view hidden flex-1 pt-12 pb-10 sm:pt-28 sm:pb-16">
+      <div class="mx-auto w-full max-w-5xl px-6">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="font-display text-3xl font-bold tracking-tight">Catálogo</h2>
+            <p class="mt-2 text-sm text-muted-foreground">Produtos à pronta entrega em Manaus com envio rápido.</p>
+          </div>
+
+          <!-- Barra de Busca -->
+          <div class="relative w-full md:w-72">
+            <input id="search-input" type="text" placeholder="Buscar carta, box, Charizard..." class="w-full rounded-full border border-border bg-card py-2 pl-4 pr-10 text-sm outline-none transition-colors focus:border-foreground" />
+            <button id="clear-search-btn" type="button" aria-label="Limpar busca" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">✕</button>
+          </div>
+        </div>
+
+        <!-- Filtros em Pílula -->
+        <div id="category-filters" class="mt-6 flex flex-wrap gap-2">
+          <button data-category="Todos" class="filter-pill rounded-full border border-foreground bg-foreground px-4 py-1.5 text-xs font-medium text-background transition-all">Todos</button>
+          <button data-category="Booster Box" class="filter-pill rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground hover:border-foreground hover:text-foreground transition-all">Booster Boxes</button>
+          <button data-category="ETB" class="filter-pill rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground hover:border-foreground hover:text-foreground transition-all">ETBs &amp; Especiais</button>
+          <button data-category="Slab" class="filter-pill rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground hover:border-foreground hover:text-foreground transition-all">Slabs CGC/PSA</button>
+          <button data-category="Avulsas" class="filter-pill rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground hover:border-foreground hover:text-foreground transition-all">Cartas Avulsas</button>
+        </div>
+
+        <!-- Grid de Produtos -->
+        <div id="products-grid" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Cards inseridos pelo app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: SOBRE A KOTORI -->
+    <section id="view-sobre" class="page-view hidden flex-1 flex items-center pt-12 pb-10 sm:pt-28 sm:pb-16">
+      <div class="mx-auto grid w-full max-w-5xl items-center gap-12 px-6 md:grid-cols-2">
+        <div>
+          <h2 class="font-display text-3xl font-bold tracking-tight">Sobre a Kotori 小鳥</h2>
+          <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            A <strong>Kotori</strong> nasceu da paixão pelo colecionismo de Pokémon TCG e pela curadoria de produtos originais importados do Japão e da China. Cada item é embalado com proteção reforçada para chegar impecável na sua coleção.
+          </p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft border border-border">📍</span>
+              <div>
+                <p class="font-semibold">Entrega Expressa em Manaus</p>
+                <p class="text-muted-foreground">Motoboy / Uber Direct com cálculo por distância ou retirada combinada.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft border border-border">💬</span>
+              <div>
+                <p class="font-semibold">Instagram &amp; Atendimento Direto</p>
+                <a href="https://instagram.com/kotoribr" target="_blank" rel="noopener noreferrer" class="text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">@kotoribr</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background-soft border border-border">💬</span>
+              <div>
+                <p class="font-semibold">Instagram &amp; Atendimento Direto</p>
+                <a href="https://instagram.com/kotoribr" target="_blank" rel="noreferrer" class="text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">@kotoribr</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card Polaroid Inclinado -->
+        <div class="relative mx-auto w-72 sm:w-80">
+          <figure class="relative -rotate-3 rounded-2xl border border-border bg-card p-4 pb-5 shadow-md transition-transform hover:rotate-0">
+            <span aria-hidden="true" class="absolute -top-3 left-1/2 h-6 w-20 -translate-x-1/2 rotate-2 rounded bg-brand-accent/70"></span>
+            <div class="flex aspect-square items-center justify-center rounded-xl bg-brand-moss-soft p-6">
+              <div class="text-center">
+                <p class="font-display text-4xl font-extrabold text-zinc-900">小鳥</p>
+                <p class="mt-1 text-xs font-semibold uppercase tracking-widest text-zinc-700">Kotori TCG</p>
+              </div>
+            </div>
+            <figcaption class="mt-4 text-center text-sm font-medium leading-snug">
+              “De colecionador para colecionador: cuidado em cada sleeve e cada caixa.”
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: CHECKOUT / QR CODE WHATSAPP -->
+    <section id="view-checkout" class="page-view hidden flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-10 sm:pt-28 sm:pb-16">
+      <div class="mx-auto w-full max-w-sm rounded-3xl border border-border bg-card p-8 text-center shadow-sm">
+        <h2 class="font-display text-2xl font-bold tracking-tight">Escaneie o QR Code</h2>
+        <p class="mt-2 text-xs text-muted-foreground">Aponte a câmera do seu celular para enviar o pedido pelo WhatsApp.</p>
+
+        <!-- Moldura branca fixa para garantir leitura do QR Code no tema claro e escuro -->
+        <div class="mx-auto mt-6 flex h-52 w-52 items-center justify-center rounded-2xl border border-border bg-white p-3 shadow-2xs">
+          <img id="checkout-qr-img" src="" alt="QR Code do pedido no WhatsApp" class="h-full w-full object-contain" />
+        </div>
+
+        <a
+          id="checkout-direct-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition-transform hover:scale-[1.02] active:scale-[0.98]"
+        >
+          Abrir no WhatsApp
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+
+        <button
+          type="button"
+          onclick="navigateTo('catalogo')"
+          class="mt-4 inline-block text-xs font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+        >
+          ← Voltar para o catálogo
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- NAVBAR FLUTUANTE -->
+  <header class="sticky bottom-3 sm:fixed sm:inset-x-0 sm:top-4 sm:bottom-auto z-40 px-4 pb-2 sm:pb-0 pointer-events-none">
+    <div class="mx-auto flex w-full max-w-5xl items-center justify-between sm:justify-center">
+      
+      <!-- ESQUERDA (APENAS MOBILE): Menu Hambúrguer + Nome da Página Atual + Dropdown -->
+      <div class="relative sm:hidden pointer-events-auto">
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Abrir menu de navegação" class="flex items-center gap-2 rounded-full border border-border bg-card/95 px-3.5 py-2 text-xs font-semibold text-foreground shadow-md backdrop-blur-md transition-colors active:scale-95">
+          <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <span id="mobile-current-page">Início</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+
+        <!-- Dropdown Mobile -->
+        <div id="mobile-menu-dropdown" class="hidden absolute bottom-full left-0 mb-2 w-44 origin-bottom-left rounded-2xl border border-border bg-card/95 p-1.5 shadow-xl backdrop-blur-md">
+          <button type="button" data-nav="inicio" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Início</button>
+          <button type="button" data-nav="destaques" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Destaques</button>
+          <button type="button" data-nav="catalogo" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Catálogo</button>
+          <button type="button" data-nav="sobre" class="nav-link mobile-nav-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs transition-colors">Sobre</button>
+        </div>
+      </div>
+
+      <!-- PÍLULA PRINCIPAL -->
+      <nav aria-label="Menu principal" class="pointer-events-auto flex items-center gap-1 rounded-full border border-border bg-card/95 p-1.5 text-xs sm:text-sm shadow-md sm:shadow-sm backdrop-blur-md">
+        
+        <!-- Links Desktop -->
+        <button type="button" data-nav="inicio" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Início</button>
+        <button type="button" data-nav="destaques" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Destaques</button>
+        <button type="button" data-nav="catalogo" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Catálogo</button>
+        <button type="button" data-nav="sobre" class="nav-link hidden sm:inline-block rounded-full px-3 py-1.5 transition-colors">Sobre</button>
+        
+        <!-- Botão do Carrinho -->
+        <button id="open-cart-btn" type="button" class="sm:ml-1 inline-flex items-center gap-1.5 rounded-full bg-foreground px-3 py-1.5 sm:px-3.5 font-medium text-background transition-transform hover:scale-105 active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="hidden sm:inline">Carrinho</span>
+          <span id="cart-badge" class="rounded-full bg-brand-moss px-1.5 py-0.2 text-[11px] font-bold text-zinc-950">0</span>
+        </button>
+
+        <!-- Menu Configurações -->
+        <div class="relative">
+          <button id="settings-btn" type="button" aria-label="Configurações de animação" title="Configurações" class="rounded-full p-2 text-muted-foreground transition-colors hover:bg-background-soft hover:text-foreground">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <div id="settings-popover" class="hidden absolute bottom-full sm:bottom-auto sm:top-full right-0 mb-2 sm:mb-0 sm:mt-2 w-56 rounded-2xl border border-border bg-card p-3 shadow-xl">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-medium">Pausar animações</span>
+              <input id="toggle-animations" type="checkbox" class="h-4 w-4 accent-foreground cursor-pointer" />
+            </div>
+            <p class="mt-1 text-[11px] text-muted-foreground">Desativa a flutuação dos itens, piscadas e o giro do selo.</p>
+          </div>
+        </div>
+
+        <!-- Alternar Tema Claro/Escuro -->
+        <button id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema" class="rounded-full p-2 text-muted-foreground transition-colors hover:bg-background-soft hover:text-foreground">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- FOOTER SEMPRE ABAIXO DO MENU -->
+  <footer class="border-t border-border bg-background py-3.5 sm:py-8">
+    <div class="mx-auto flex max-w-5xl flex-row items-center justify-between gap-2 px-4 sm:px-6 text-left text-xs text-muted-foreground">
+      
+      <!-- Lado Esquerdo: Copyright e Assinatura -->
+      <div class="min-w-0 space-y-0.5 sm:space-y-1">
+        <p class="truncate font-medium text-zinc-700 dark:text-zinc-300">KOTORI 小鳥 TCG e Colecionáveis © 2026</p>
+        <p class="text-[11px]">Feito para quem coleciona.</p>
+      </div>
+
+      <!-- Lado Direito: Instagram e WhatsApp (+ Chamada apenas no Desktop) -->
+      <div class="flex shrink-0 flex-col items-end gap-2">
+        <div class="flex items-center gap-1.5 sm:gap-2.5">
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/kotoribr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram da Kotori"
+            class="inline-flex items-center gap-1.5 rounded-full border border-border bg-background-soft p-2 sm:px-3.5 sm:py-1.5 font-medium text-foreground transition-colors hover:border-foreground"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+            <span class="hidden sm:inline">@kotoribr</span>
+          </a>
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/5592995254107?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20ou%20sugest%C3%A3o%20sobre%20a%20loja."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp da Kotori"
+            class="inline-flex items-center gap-1.5 rounded-full border border-border bg-background-soft p-2 sm:px-3.5 sm:py-1.5 font-medium text-foreground transition-colors hover:border-foreground"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0 text-brand-moss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span class="hidden sm:inline">WhatsApp</span>
+          </a>
+        </div>
+
+        <p class="hidden sm:block text-[11px] font-medium text-muted-foreground">Dúvidas ou sugestões? Envie uma mensagem!</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- DRAWER DO CARRINHO LATERAL -->
+  <div id="cart-backdrop" class="fixed inset-0 z-50 hidden bg-black/40 backdrop-blur-xs transition-opacity"></div>
+  <aside id="cart-drawer" aria-label="Carrinho de compras" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col border-l border-border bg-card shadow-2xl transition-transform duration-300">
+    <div class="flex items-center justify-between border-b border-border px-6 py-4">
+      <h2 class="font-display text-lg font-bold">Seu Carrinho</h2>
+      <div class="flex items-center gap-2">
+        <button id="clear-cart-btn" type="button" class="text-xs text-muted-foreground hover:text-red-500">Limpar</button>
+        <button id="close-cart-btn" type="button" aria-label="Fechar carrinho" class="rounded-full p-2 text-muted-foreground hover:bg-background-soft hover:text-foreground">✕</button>
+      </div>
+    </div>
+
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <!-- Itens do carrinho renderizados pelo app.js -->
+    </div>
+
+    <div class="border-t border-border bg-background-soft p-6">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-muted-foreground">Subtotal</span>
+        <span id="cart-subtotal" class="font-display text-lg font-bold">R$ 0,00</span>
+      </div>
+      <p class="mt-1 text-[11px] text-muted-foreground">Frete para Manaus ou Correios calculado na finalização.</p>
+      <button id="checkout-whatsapp-btn" type="button" class="mt-4 w-full rounded-full bg-foreground py-3 text-sm font-semibold text-background transition-transform hover:scale-[1.02] active:scale-[0.98]">
+        Finalizar Pedido
+      </button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

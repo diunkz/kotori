@@ -1,0 +1,333 @@
+/* Tokens de Tema (Claro e Escuro) */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f5f2;
+  --fg: #18181b;
+  --muted-fg: #6b6b70;
+  --card: #ffffff;
+  --border: #e5e4df;
+
+  /* Paleta Suave Kotori */
+  --moss-soft: #e3ece0;
+  --earth-soft: #f2e8dc;
+  --lilac-soft: #ece8f6;
+  --accent-soft: #fbf3d5;
+}
+
+html.dark {
+  --bg: #121214;
+  --bg-soft: #1b1b1f;
+  --fg: #f4f4f5;
+  --muted-fg: #a1a1aa;
+  --card: #18181b;
+  --border: #27272a;
+
+  --moss-soft: #223020;
+  --earth-soft: #332920;
+  --lilac-soft: #282436;
+  --accent-soft: #362f18;
+}
+
+/* ==========================================
+   ESCALA DE ZOOM APENAS EM TELAS LARGAS (LANDSCAPE)
+   ========================================== */
+@media (min-width: 1280px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+/* ==========================================
+   TRANSIÇÃO DE TELAS (FADE RÁPIDO)
+   ========================================== */
+.page-view {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.page-view.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo do link ativo na Navbar (Desktop e Dropdown Mobile) */
+.nav-link {
+  color: var(--muted-fg);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: var(--bg-soft);
+  color: var(--fg);
+}
+
+.nav-link.active {
+  background-color: var(--bg-soft);
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/* ==========================================
+   ANIMAÇÕES DO HERO
+   ========================================== */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-spin {
+  animation: spinSlow 28s linear infinite;
+}
+
+@keyframes floatSticker {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.sticker-float {
+  animation: floatSticker 4s ease-in-out infinite;
+}
+
+/* ==========================================
+   SEMENTES VIBRANDO LEVEMENTE PARA CHAMAR ATENÇÃO
+   ========================================== */
+@keyframes seedWiggle {
+  0%, 58%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  65% {
+    transform: translateY(-2px) rotate(-6deg);
+  }
+  72% {
+    transform: translateY(-2px) rotate(6deg);
+  }
+  79% {
+    transform: translateY(-1px) rotate(-4deg);
+  }
+  86% {
+    transform: translateY(0px) rotate(3deg);
+  }
+}
+
+.seed-wiggle {
+  animation: seedWiggle 3.8s ease-in-out infinite;
+}
+
+/* Piscar rápido do Shima-enaga */
+@keyframes kotoriBlink {
+  0%, 72%, 82%, 92%, 100% {
+    transform: scaleY(1);
+  }
+  77%, 87% {
+    transform: scaleY(0.08);
+  }
+}
+
+.kotori-eye {
+  animation: kotoriBlink 3.2s ease-in-out infinite;
+}
+
+/* ==========================================
+   EXPRESSÃO FELIZ DO PÁSSARO AO SER ALIMENTADO
+   ========================================== */
+@keyframes happyBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-6px) scale(1.06);
+  }
+  60% {
+    transform: translateY(-2px) scale(1.03);
+  }
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(4px) scale(0.7);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.05);
+    opacity: 0.95;
+  }
+}
+
+#kotori-bird-svg.is-happy {
+  animation: happyBounce 0.65s ease-out;
+}
+
+#kotori-bird-svg.is-happy .kotori-eyes-normal {
+  opacity: 0;
+}
+
+#kotori-bird-svg.is-happy .kotori-happy-face {
+  opacity: 1;
+}
+
+#kotori-bird-svg.is-happy .kotori-heart {
+  animation: floatHeart 1.2s ease-out forwards;
+}
+
+/* ==========================================
+   FLIP 3D SEM BUGS
+   ========================================== */
+.flip-scene {
+  perspective: 1000px;
+}
+
+.flip-card {
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) {
+  .flip-scene:not(.no-hover-flip):hover .flip-card {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-scene.is-flipped .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* ==========================================
+   DEDO INDICADOR + "DESLIZE" DENTRO DA BOLINHA (MOBILE)
+   ========================================== */
+@keyframes swipeFingerHint {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(-10px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  92%, 100% {
+    transform: translateX(12px);
+    opacity: 0;
+  }
+}
+
+.swipe-hint-group {
+  animation: swipeFingerHint 1.9s ease-in-out infinite;
+}
+
+/* Respeita o botão de pausar animações na navbar */
+body.animations-paused .orbit-spin,
+body.animations-paused .sticker-float,
+body.animations-paused .seed-wiggle,
+body.animations-paused .kotori-eye,
+body.animations-paused .swipe-hint-group {
+  animation-play-state: paused !important;
+}
+
+/* ==========================================
+   ADESIVOS E SEMENTES ARRASTÁVEIS (COM RETORNO ELÁSTICO)
+   ========================================== */
+.draggable-sticker {
+  z-index: 15;
+  touch-action: none;
+  user-select: none;
+  transition: filter 0.2s ease, opacity 0.3s ease;
+}
+
+.draggable-sticker.is-returning {
+  transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+.draggable-sticker.is-dragging {
+  z-index: 40 !important;
+  transition: none !important;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.18));
+}
+
+.draggable-sticker.is-eaten {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* ==========================================
+   PÍLULA CLEAN FLUTUANTE ACIMA DO BOTÃO DE ADICIONAR
+   ========================================== */
+@keyframes btnPillQuickFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 4px) scale(0.95);
+  }
+  18% {
+    opacity: 1;
+    transform: translate(-50%, -2px) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -4px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px) scale(0.96);
+  }
+}
+
+@keyframes btnPlusOneFloat {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 4px) scale(0.9);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -2px) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -14px) scale(0.95);
+  }
+}
+
+.btn-feedback-bubble {
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 30;
+  animation: btnPillQuickFade 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.btn-plus-one {
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 30;
+  animation: btnPlusOneFloat 0.55s ease-out forwards;
+}
