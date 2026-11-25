@@ -2,7 +2,7 @@
 <html lang="pt-BR" class="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>KOTORI 小鳥 — Cards & Collectibles</title>
   <meta name="description" content="Loja especializada em Pokémon TCG, Booster Boxes Japonesas e Chinesas, ETBs e Slabs CGC/PSA em Manaus e para todo o Brasil." />
   
@@ -657,8 +657,8 @@
   </footer>
 
   <!-- DRAWER DO CARRINHO LATERAL -->
-  <div id="cart-backdrop" class="fixed inset-0 z-50 hidden bg-black/40 backdrop-blur-xs transition-opacity"></div>
-  <aside id="cart-drawer" aria-label="Carrinho de compras" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col border-l border-border bg-card shadow-2xl transition-transform duration-300">
+  <div id="cart-backdrop" class="fixed inset-x-0 top-0 z-50 hidden h-lvh bg-black/40 backdrop-blur-xs transition-opacity"></div>
+  <aside id="cart-drawer" aria-label="Carrinho de compras" class="fixed right-0 top-0 z-50 flex h-lvh w-full max-w-md translate-x-full flex-col border-l border-border bg-card shadow-2xl transition-transform duration-300">
     <div class="flex items-center justify-between border-b border-border px-6 py-4">
       <h2 class="font-display text-lg font-bold">Seu Carrinho</h2>
       <div class="flex items-center gap-2">
@@ -671,7 +671,7 @@
       <!-- Itens do carrinho renderizados pelo app.js -->
     </div>
 
-    <div class="border-t border-border bg-background-soft p-6">
+    <div class="border-t border-border bg-background-soft px-6 pt-6 pb-20 sm:pb-6">
       <div class="flex items-center justify-between text-sm">
         <span class="text-muted-foreground">Subtotal</span>
         <span id="cart-subtotal" class="font-display text-lg font-bold">R$ 0,00</span>
